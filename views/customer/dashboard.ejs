@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&family=Roboto:wght@300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/client-dashboard.css" />
+    <link rel="icon" href="/images/occiris-favicon.ico" />
+    <script src="/scripts/customer/client-dashboard-script.js" defer></script>
+    <title>My Files</title>
+  </head>
+  <body>
+    <main>
+      <section id="profile">
+        <div>
+          <h3>Hi, <%- locals.user.firstName %>! &#128522;</h3>
+          <div id="guides-btn" class="settings-flex green-hover">
+            <%- include("../svgs/question-mark") %>
+            <p>Guides</p>
+          </div>
+          <div id="settings-btn" class="settings-flex green-hover">
+            <%- include("../svgs/key") %>
+            <p>Change Password</p>
+          </div>
+        </div>
+        <a href="/logout" class="settings-flex" id="log-out-flex">
+          <p id="log-out-btn">Log out</p>
+          <%- include("../svgs/logout") %>
+        </a>
+      </section>
+      <section id="myfiles-section">
+        <div id="header">
+          <h2 id="page-title">My files</h2>
+          <div>
+            <a class="btn" href="/order/captions">New captions order</a>
+          </div>
+        </div>
+        <div class="detail-titles">
+          <p class="name-title">Name</p>
+          <p>Length</p>
+          <p>Type</p>
+          <p>Status</p>
+          <p>Uploaded</p>
+          <p>Download file</p>
+        </div>
+        <ul>
+          <% if (orders.length == 0) { %>
+          <li
+            class="order-details"
+            style="grid-template-columns: 1fr; text-align: center"
+          >
+            <h1>You haven't made any orders yet...</h1>
+          </li>
+          <% } %> <% for (const order of orders) { %>
+          <li class="order-details">
+            <p class="name"><%- order.name %></p>
+            <p class="details-in-gray"><%- order.time.colonNotation %></p>
+            <p class="details-in-gray"><%= order.type %></p>
+            <% if (order.status !== "completed") { %>
+            <p class="details-in-gray message info">in progress</p>
+            <% } else if (order.status == "completed") { %>
+            <p class="details-in-gray message success">completed</p>
+            <% } %>
+            <p class="details-in-gray">
+              <%= timeAgo(Date.parse(order.date.placed)) %>
+            </p>
+            <% if (order.files) { %>
+            <p class="download-icon">
+              <a href="<%= order.files.captions %> ">
+                <%- include("../svgs/download") %>
+              </a>
+            </p>
+            <% } %>
+          </li>
+          <% } %>
+        </ul>
+      </section>
+      <section id="settings-modal" class="modal">
+        <h3>Change Password</h3>
+        <p id="warning-message" class="message warning"></p>
+        <p id="success-message" class="message success"></p>
+        <form id="password-change-form">
+          <input
+            type="hidden"
+            name="csrfToken"
+            value="<%- locals.csrf %>"
+            id="csrf-token"
+          />
+          <label for="new-password">New Password</label>
+          <input type="password" id="new-password" required />
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" required />
+          <button class="submit-button">Save Changes</button>
+        </form>
+      </section>
+      <section id="gray-background"></section>
+      <section id="guides-modal" class="modal">
+        <ul>
+          <li>
+            <a href="/guides/how-to-add-closed-captions"
+              >Add closed captions to your YouTube video</a
+            >
+          </li>
+          <li>
+            <a href="/guides/auto-tranlate-captions-upload"
+              >Auto-translate captions before you upload</a
+            >
+          </li>
+          <li>
+            <a href="/guides/auto-translate-captions-viewing"
+              >Auto-translate captions while watching</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
