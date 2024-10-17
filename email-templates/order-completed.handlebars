@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Order Received</title>
+    <style>
+      u + #body a { color: #fff; text-decoration: none; font-size: inherit;
+      font-family: inherit; font-weight: inherit; line-height: inherit; } body {
+      width: 70%; font-family: "Roboto", sans-serif; } img { width: 15%; margin:
+      24px auto; display: block; } main { width: 30%; margin: 8px auto; } h3, p
+      { text-align: center; } table { margin-top: 32px; } th { color: black;
+      padding: 8px 8px; font-weight: 400; margin: 12px 0; } td { padding: 8px
+      8px; } span { font-style: italic; font-weight: 500; } a { display: block;
+      width: 50%; margin: 32px auto; padding: 8px 16px; background-color:
+      #308381; color: #fff; text-decoration: none; text-align: center;
+      border-radius: 8px; font-family: "Roboto", sans-serif; font-weight: 200; }
+    </style>
+  </head>
+  <body id="body">
+    <header>
+      <img
+        src="https://storage.googleapis.com/occiris/oCCiris%20logo-2.png"
+        alt="Occiris' logo"
+      />
+    </header>
+    <main>
+      <h3>Your files are ready!</h3>
+      <p>
+        Hi, your files for the following order are ready:
+        <span>"{{orderName}}"</span>
+      </p>
+      <a href="https://occiris.com/myfiles">Download files</a>
+    </main>
+  </body>
+</html>
