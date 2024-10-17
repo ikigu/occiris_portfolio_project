@@ -6,3 +6,6 @@ subtitles.vtt
 zfind.js
 play.html
 mykey.json
+.DS_Store
+package-lock.json
+utils/captions.js
