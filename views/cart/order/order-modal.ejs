@@ -1,0 +1,21 @@
+<section id="form-control">
+
+  <!-- add order type to form -->
+  <form class ="order-modal" style="padding-bottom: 0;" data-ordertype="<%= orderType %>" id="form">
+    <label for="links" style="font-size: 16px"
+      >Paste your YouTube link here! (Submit only one link at a time)</label
+    >
+    <span id="reset-btn"><button type="reset" id="span-button">X</button></span>
+    <p class="invalid">Link invalid! Please try again.</p>
+    <input
+      name="links"
+      id="links"
+      cols="15"
+      rows="1"
+      style="background-color: #fff"
+      maxlength="60"
+      required
+    ></input>
+    <button class="submit-button">Submit</button>
+  </form>
+</section>

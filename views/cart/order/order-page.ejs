@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../../includes/head") %>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/order-captions.css" />
+    <link rel="canonical" href="https://occiris.com/order/<%= orderType %>" />
+    <script src="/scripts/order/variables.js" defer></script>
+    <script src="/scripts/order/functions.js" defer></script>
+    <script src="/scripts/order/order-script.js" defer></script>
+    <script
+      src="/scripts/responsive/responsive-header-script.js"
+      defer
+    ></script>
+  </head>
+  <body style="min-width: 1440px">
+    <header><%- include("../../includes/header") %></header>
+    <main>
+      <%- include("../../includes/side-menu") %> <%- include("./order-modal") %>
+      <div id="gray-background"></div>
+      <h3 id="summary-title"><%= heading %></h3>
+      <a class="more-links-button"><%= btntext %>></a>
+      <div id="body-flex">
+        <section id="order-items">
+          <ol id="order-items-list">
+            <%- include("./empty-state") %> <%- include("./order-template") %>
+          </ol>
+          <a class="more-links-button bottom-button">Add more links</a>
+        </section>
+        <section id="checkout-card-section">
+          <%- include("./checkout-card") %>
+        </section>
+      </div>
+    </main>
+    <footer id="footer">
+      <p>&#169; Occiris</p>
+      <p id="year">2022</p>
+    </footer>
+  </body>
+</html>
