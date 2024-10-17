@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/checkout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&family=Roboto:wght@300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/occiris-favicon.ico" />
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=<%= paypalClientId %>&enable-funding=venmo&disable-funding=paylater&currency=USD"
+      defer
+    ></script>
+    <script src="/scripts/order/checkout-script.js" defer></script>
+    <title>Checkout</title>
+  </head>
+  <body>
+    <main>
+      <h4 id="payment-title">Payment</h4>
+      <h5 id="order-title">Complete your order</h5>
+      <p id="success-message"></p>
+      <a id="view-files-link" href="/myfiles"></a>
+      <div id="container">
+        <h4 id="amount">
+          <span>$</span><%- totalCost.toFixed(2) %>
+          <span id="usd">USD</span>
+        </h4>
+        <p>
+          <%- include("../svgs/checkmark") %> <%- totalCost.toFixed(2) %>
+          minutes total
+        </p>
+        <p><%- include("../svgs/checkmark") %> Fast, accurate, convenient</p>
+      </div>
+      <div id="paypal-button-container"></div>
+    </main>
+  </body>
+</html>
