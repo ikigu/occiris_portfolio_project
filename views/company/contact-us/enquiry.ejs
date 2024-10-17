@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Us</title>
+    <%- include("../../includes/head") %>
+    <link rel="stylesheet" href="/styles/forms.css" />
+    <link rel="stylesheet" href="/styles/order-form.css" />
+    <script src="/scripts/activate-submit-btns.js" defer></script>
+    <script src="/scripts/enquiries-script.js" defer></script>
+    <script src="/scripts/responsive/responsive-header-script.js"></script>
+    <link rel="canonical" href="https://occiris.com/contact-sales" />
+  </head>
+  <body> 
+    <main class="grid-container">
+      <%- include("../../includes/side-menu") %>
+      <section id="heading">
+        <a href="/">
+          <img src="/images/occiris-logo.png" />
+        </a>
+        <h1>Enquiries</h1>
+        <p>
+          Require tons of hours captioned, have videos not on YouTube or simply
+          need a quote? Tell us a little about your project and a member of our
+          team will be in touch! You may qualify for large-order discounts!
+        </p>
+      </section>
+      <form>
+        <input
+          type="hidden"
+          value="<%= locals.csrf %>"
+          name="csrfToken"
+          id="csrfToken"
+        />
+        <label for="name">Full Name<span>*</span></label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your full name"
+          required
+        />
+        <label for="email">Email address<span>*</span></label>
+        <input
+          type="email"
+          id="email"
+          placeholder="name@example.com"
+          required
+        />
+
+        <label for="volume-hours"
+          >Volume
+          <span style="color: rgb(143, 142, 142); font-style: italic"
+            >(hours per month)<span>*</span></span
+          ></label
+        >
+        <select name="volume-hours" id="volume-hours" required>
+          <option value="" disabled sele>Select an option</option>
+          <option value="0-10">0-10</option>
+          <option value="11-20">11-20</option>
+          <option value="21-30">21-30</option>
+          <option value="31-40">31-40</option>
+          <option value="40+">40+</option>
+        </select>
+        <label for="company-name"
+          >Company Name
+          <span style="color: rgb(143, 142, 142); font-style: italic"
+            >(optional)</span
+          ></label
+        >
+        <input type="text" name="company-name" id="company-name" />
+        <label for="message"
+          >Anything you want to let us know?
+          <span style="color: rgb(143, 142, 142); font-style: italic"
+            >(optional)</span
+          ></label
+        >
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <div class="checkbox-flex">
+          <input type="checkbox" id="checkbox" required />
+          <label for="consent" id="consent-label" required>
+            By submitting this form you consent to Occiris processing your data
+            and contacting you to fulfill your request. For more information on
+            how we are committed to protecting and respecting your privacy,
+            please review our privacy policy.
+          </label>
+        </div>
+        <button id="submit-button">Submit</div></button>
+        <p class="message" id="success-message"></p>
+        <p class="message" id="warning-message"></p>
+      </form>
+    </main>
+    <footer><%- include("../../includes/footer") %></footer>
+  </body>
+</html>

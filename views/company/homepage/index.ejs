@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../../includes/head") %>
+    <title>Occiris | Closed Captions for YouTube</title>
+    <meta
+      name="description"
+      content="Get closed captions for your YouTube videos from Occiris. Reach wider and more diverse audiences. "
+    />
+    <script
+      src="/scripts/responsive/responsive-header-script.js"
+      defer
+    ></script>
+    <script src="/scripts/cookie-banner.js" defer></script>
+    <link rel="stylesheet" href="/styles/cookie-banner.css" />
+    <link rel="canonical" href="https://occiris.com/" />
+  </head>
+  <body>
+    <header>
+      <%- include("../../includes/header") %> <%-
+      include("../../includes/header-side-menu") %>
+    </header>
+    <main>
+      <%- include("../../includes/side-menu") %> <%- include("./hero") %> <%-
+      include("./price-cards") %> <%- include("./reviews") %> <%-
+      include("./statistics") %> <%- include("./captions-growth") %> <%-
+      include("./transcription-growth") %> <%- include("./last-cta") %> <% if
+      (!cookieBannerUnderstood) { %>
+      <article style="display: none" id="cookie-banner">
+        <p>
+          This website uses cookies to improve your web experience. By using the
+          site, you agree to the use of cookies.
+        </p>
+        <button id="cookie-accept">I understand</button>
+      </article>
+      <% } %>
+    </main>
+    <footer><%- include("../../includes/footer") %></footer>
+  </body>
+</html>

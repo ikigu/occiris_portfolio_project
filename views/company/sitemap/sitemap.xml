@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://occiris.com/</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://occiris.com/order/captions</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/order/transcript</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/how-we-started</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/our-philosophy</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/contact-sales</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/login</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/order/both</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/guides/how-to-add-closed-captions</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/guides/auto-tranlate-captions-upload</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/guides/auto-translate-captions-viewing</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/privacy-policy</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/terms</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://occiris.com/signup</loc>
+  <lastmod>2023-04-19T22:52:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+
+</urlset>
