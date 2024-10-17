@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head") %>
+    <link rel="stylesheet" href="/styles/guides.css" />
+    <link
+      rel="canonical"
+      href="https://occiris.com/guides/how-to-add-closed-captions"
+    />
+    <script
+      src="/scripts/responsive/responsive-header-script.js"
+      defer
+    ></script>
+    <title>Adding captions</title>
+  </head>
+  <body>
+    <header><%- include("../includes/header") %></header>
+    <%- include("../includes/header-side-menu") %>
+    <main>
+      <%- include("../includes/side-menu") %>
+      <section class="main-section">
+        <h3>How to add closed captions/subtitles to your YouTube video</h3>
+        <p>
+          Are you looking to make your YouTube videos more accessible to a wider
+          audience by adding captions? Here's how!
+        </p>
+
+        <ol>
+          <li>
+            Go to
+            <a
+              href="https://studio.youtube.com"
+              target="_blank"
+              id="yt-studio-link"
+              >YouTube Studio</a
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              fill="currentColor"
+              class="bi bi-box-arrow-up-right"
+              viewBox="0 0 16 16"
+              id="svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+              />
+            </svg>
+
+            and sign in to your account.
+          </li>
+          <li>
+            Click on the "Subtitles" tab on the left-hand side of the screen.
+          </li>
+          <li>
+            Locate the video you want to add captions to. You can easily find
+            videos using the search bar.
+          </li>
+          <li>Click on the title of the video you want to add captions to.</li>
+          <li>
+            You'll probably need to a add a new language for you to be able to
+            add captions. Use the Add Language button for this.
+          </li>
+          <li>
+            Once that's done, under the Subtitles column, click on the ADD
+            button.
+          </li>
+          <li>Select "Upload file" then "With timing"</li>
+          <li>Choose the file you want to upload and click on "Open."</li>
+          <li>You're able to review the captions and make edits.</li>
+          <li>
+            For .vtt caption files, editing will cause styles in the original
+            file to be removed.
+          </li>
+          <li>When you're happy, click Publish!</li>
+        </ol>
+        <p>
+          That's it! Your video now has captions, making it more accessible to a
+          wider audience.
+        </p>
+
+        <h5>Watch how to add subtitles and closed captions</h5>
+        <div id="iframe">
+          <iframe
+            width="600"
+            height="345"
+            src="https://www.youtube.com/embed/rB9ql0L0cUQ"
+            title="How to Add Captions While Uploading & Editing Your Videos"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <section class="other-guides">
+        <h5>Other guides</h5>
+        <ul>
+          <li>
+            <a href="/guides/auto-translate-captions-viewing"
+              >Auto-translate closed captions during viewing</a
+            >
+          </li>
+          <li>
+            <a href="/guides/auto-tranlate-captions-upload"
+              >Auto-translate captions during uploads</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer><%- include("../includes/footer") %></footer>
+  </body>
+</html>
