@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&family=Roboto:wght@300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/client-dashboard.css" />
+    <link rel="icon" href="/images/occiris-favicon.ico" />
+    <script src="/scripts/client-dashboard-script.js" defer></script>
+    <script src="/scripts/admin/dashboard.script.js" defer></script>
+    <title>Admin</title>
+  </head>
+  <body>
+    <main>
+      <section id="profile">
+        <div>
+          <h3>Hi, <%- locals.user.firstName %>! &#128522;</h3>
+          <div id="guides-btn" class="settings-flex green-hover">
+            <%- include("../svgs/file") %>
+            <p>Guides</p>
+          </div>
+          <div id="settings-btn" class="settings-flex green-hover">
+            <%- include("../svgs/gear-icon") %>
+            <p>Settings</p>
+          </div>
+        </div>
+        <a href="/logout" class="settings-flex" id="log-out-flex">
+          <p id="log-out-btn">Log out</p>
+          <%- include("../svgs/logout") %>
+        </a>
+      </section>
+      <section id="myfiles-section">
+        <div id="header">
+          <h2 id="page-title">Orders</h2>
+          <div>
+            <a class="btn" href="/order/captions">Create Client Order</a>
+          </div>
+        </div>
+        <div class="detail-titles detail-titles-admin">
+          <p class="name-title name-title-admin">Name</p>
+          <p>Length</p>
+          <p>Cost</p>
+          <p>Type</p>
+          <p>Status</p>
+          <p>Uploaded</p>
+          <!-- <p>Download file</p> -->
+        </div>
+        <ul>
+          <% for (const order of allOrders) { %>
+          <li class="order-details order-details-admin">
+            <p
+              class="name name-admin"
+              id="order"
+              data-videoid="<%- order._id.toString() %>"
+              data-videoYoutubeId="<%- order.youtube.id %>"
+              data-videoName="<%- order.name %>"
+            >
+              <%- order.client.name %>
+            </p>
+            <!-- change to colon notation -->
+            <p class="details-in-gray"><%= order.time.colonNotation %></p>
+            <p class="details-in-gray">$<%= order.cost.toFixed(2) %></p>
+            <p class="details-in-gray"><%= order.type %></p>
+            <% if (order.status == "in-progress") {%>
+            <p class="details-in-gray message info">in progress</p>
+            <% } else {%>
+            <p class="details-in-gray message success">delivered</p>
+            <% } %>
+            <p class="details-in-gray">
+              <%= timeAgo(Date.parse(order.date.placed)) %>
+            </p>
+          </li>
+          <% } %>
+        </ul>
+      </section>
+      <section id="settings-modal" class="modal">
+        <h3>Change Password</h3>
+        <p id="warning-message" class="message warning"></p>
+        <p id="success-message" class="message success"></p>
+        <form id="password-change-form">
+          <label for="new-password">New Password</label>
+          <input type="text" id="new-password" />
+          <label for="confirm-password">Confirm Password</label>
+          <input type="text" id="confirm-password" />
+          <button class="submit-button">Save Changes</button>
+        </form>
+      </section>
+      <section id="gray-background"></section>
+      <section id="order-modal" class="modal view-order-modal">
+        <div class="flex-container">
+          <div id="video-details">
+            <iframe
+              id="iFrame"
+              width="544"
+              height="306"
+              src=""
+              title=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div id="captions-upload-section">
+            <h4 class="details-in-gray">
+              File name: <span id="file-name" class="details"></span>
+            </h4>
+            <form id="send-file-form">
+              <input
+                type="file"
+                id="file"
+                name="file"
+                accept=".srt, .vtt, .txt, .docx"
+              />
+              <label class="btn upload-btn no-margin" id="label" for="file">
+                Upload captions</label
+              >
+              <div id="mark-as-complete">
+                <h4 class="details-in-gray">
+                  Uploaded srt: <span id="srt-title" class="details"></span>
+                </h4>
+                <button class="btn no-margin form-button">
+                  Send to customer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

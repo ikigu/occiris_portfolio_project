@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Client Order</title>
+    <%- include("../includes/head") %>
+    <script src="/scripts/admin/order.script.js" defer></script>
+    <link rel="stylesheet" href="/styles/sign-up.css" />
+    <link rel="stylesheet" href="/styles/forms.css" />
+  </head>
+  <body>
+    <main class="auth-forms">
+      <div>
+        <a href="/">
+          <img src="/images/occiris-logo.png" alt="occiris logo" />
+        </a>
+      </div>
+      <section id="form-section">
+        <h4>Create Order</h4>
+        <p id="success-message" class="message" style="display: none"></p>
+        <p id="instructions" style="font-size: 0.8rem; text-align: center">
+          Enter client's email address
+        </p>
+        <form id="admin-order">
+          <input
+            type="hidden"
+            name="csrfToken"
+            value="<%- locals.csrf %>"
+            id="csrf-token"
+          />
+          <label for="name">Name<span>*</span></label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter client's name"
+            required
+          />
+          <label for="email-address">Email Address<span>*</span></label>
+          <input
+            type="email"
+            name="email"
+            id="email-address"
+            placeholder="Enter your email"
+            required
+          />
+          <button id="create-order-btn">Create order</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
