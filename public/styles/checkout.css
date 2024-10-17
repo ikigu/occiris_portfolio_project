@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  height: 480px;
+  width: 332px; /* 25% */
+  border-radius: 16px;
+  /* border: 3px solid #a6f41c ; */
+  background-color: white;
+  margin: 80px auto 0 auto;
+  overflow-y: scroll;
+}
+
+body {
+  background-color: #f4e8d4;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+h4 {
+  margin: 0;
+  padding: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 1.7rem;
+  padding-top: 24px;
+}
+
+h5 {
+  margin: 0;
+  padding: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 1.2rem;
+  color: rgb(143, 143, 143);
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  padding: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+svg {
+  width: 1rem;
+  margin-bottom: -4px;
+}
+
+#amount {
+  border-bottom: 1px solid rgb(143, 143, 143);
+  margin: 8px 24px 8px 24px;
+  padding: 0 0 16px 0;
+  font-size: 1.8rem;
+}
+
+span {
+  color: rgb(143, 143, 143);
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+#usd {
+  font-size: 1.2rem;
+}
+
+#container {
+  background-color: #effed5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 24px;
+}
+
+#paypal-button-container {
+  width: 80%;
+  margin: 32px auto 0 auto;
+}
+
+
+#success-message {
+  background-color: #cefcaf;
+  color: rgb(29, 75, 0);
+  display: none;
+  width: 90%;
+  font-size: 0.8rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 16px auto;
+  font-weight: 400;
+  text-align: center;
+}
+
+a {
+  color: #308381;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 17px;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

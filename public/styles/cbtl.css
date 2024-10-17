@@ -1,0 +1,89 @@
+html {
+  --color-green-100: #a6f41c;
+  --color-green-200: #308381;
+  --color-green-300: #1c2423;
+
+  --color-success-tx: #1d4b00;
+  --color-success-bg: #cefcaf;
+
+  --color-warning-tx: black;
+  --color-warning-bg: #ffc9c9;
+
+  --color-blue-inprogress: #cee9f8;
+  --color-blue-external-link: #4105c3;
+  --color-red-logout: #ef5b5b;
+  --color-beige: #f4e8d4;
+
+  --color-gray-100: rgb(146, 146, 146);
+  --color-gray-200: rgb(121, 121, 121);
+  --color-gray-300: rgb(53, 53, 53);
+
+  --color-gray-hover: rgba(87, 87, 87, 0.198);
+  --color-gray-modal: rgba(0, 0, 0, 0.532);
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 16px auto;
+  transition: background-color ease 0.3s;
+}
+
+.pri, .sec {
+  border-radius: 8px;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.pri {
+  color: #fff;
+  background-color: #1c2423;
+}
+
+.pri:hover {
+  background-color: var(--color-green-200);  
+}
+
+.sec {
+  color: black;
+  background-color: transparent;
+  border: 2px solid black;
+  box-shadow: none;
+  transition: box-shadow ease 0.4s;
+  transition: border-color ease 0.4s;
+}
+
+.sec:hover {
+  color: var(--color-green-200);
+  border-color: var(--color-green-200);
+  box-shadow: 0 0 12px rgba(87, 87, 87, 0.198);
+}
+
+.ter {
+  color: var(--color-green-200);
+  margin-top: 32px;
+  width: 100%;
+  margin-right: 15px;
+  text-align: left;
+}
+
+.ter:after {
+  content: ' >';
+  display: inline;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: padding-left .4s ease;
+}
+
+.ter:hover:after {
+  padding-left: 5px;
+  width: 4px;
+}
+
+div {
+  text-align: right !important;
+}

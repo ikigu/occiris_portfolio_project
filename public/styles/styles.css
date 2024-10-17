@@ -1,0 +1,326 @@
+/* main {
+  width: 80%;
+  margin: 0 auto;
+} */
+
+.hero {
+  display: flex;
+  margin: 6.67rem 2.67rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero img {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+#item-1 {
+  width: 100%;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+.hero img {
+  width: 38.88rem;
+}
+
+.hero h1 {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.service-cards {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 16px;
+  margin: 2rem auto 2.6rem auto;
+  box-sizing: content-box;
+}
+
+.individual-service-cards {
+  width: 340px;
+  height: 272px;
+  margin: 0.44rem auto;
+  padding: 0.66rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-top: 10px solid #308381;
+  position: relative;
+  z-index: 0;
+}
+
+.individual-service-cards ul {
+  padding-bottom: 2.67rem;
+  padding-left: 0.77rem;
+}
+
+.individual-service-cards h5 {
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.individual-service-cards h4 {
+  width: 165.352px;
+  font-size: 25px;
+  text-align: start;
+  padding: 8px;
+  display: inline;
+  margin: 0;
+  background-color: #f4e8d4;
+}
+
+.card-order-button {
+  width: 80%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 400;
+  color: #fff;
+  padding: 16px 24px;
+  background-color: #1c2423;
+  border-radius: 8px;
+  display: block;
+  margin: 20px auto 16px auto;
+  transition: background-color ease 0.3s;
+}
+
+.card-order-button:hover {
+  background-color: #308381;
+}
+
+/* This is the cards' order button */
+.order-button {
+  text-decoration: none;
+  color: #308381;
+  font-weight: 400;
+  position: relative;
+  right: 0.88rem;
+  z-index: 0;
+}
+
+.price-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 0.32rem;
+}
+
+.price {
+  color: #616868;
+}
+
+h4 {
+  text-align: center;
+  margin: 0.44rem auto;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.flex-text-and-image-text .order-button {
+  display: block;
+  text-align: right;
+}
+
+#team-section h2 {
+  text-align: center;
+}
+
+#team- div {
+  padding: 1.11rem;
+}
+
+/* Look at above*/
+
+#last-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 6.22rem;
+  margin-top: 6.22rem;
+}
+
+#last-cta h1 {
+  width: 66.66rem;
+  margin-left: 0.88rem;
+}
+
+#Learn-abt {
+  margin-bottom: 6.22rem;
+  text-align: center;
+}
+
+@media (max-width: 1225px) {
+  .service-cards {
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+  }
+}
+
+@media (max-width: 1178px) {
+  #team-group-two {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1090px) {
+  .hero img {
+    width: 105%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .flex-text-and-image img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 821px) {
+  #hamburger-menu {
+    display: none;
+  }
+}
+
+/* @media (max-width: 986px) {
+  .service-cards {
+    grid-template-columns: 100%;
+    width: 100%;
+    margin: 1rem auto;
+  }
+} */
+
+/* media query for tablets */
+
+@media (max-width: 821px) {
+  .hero {
+    flex-direction: column;
+    margin: 6.67rem 1rem;
+  }
+
+  .hero img {
+    width: 80%;
+  }
+
+  .service-cards {
+    grid-template-columns: 100%;
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  #happy-customers {
+    grid-template-columns: 100%;
+  }
+
+  .flex-text-and-image {
+    flex-direction: column;
+  }
+
+  .flex-text-and-image img {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  #accessibility-card {
+    flex-direction: column-reverse;
+  }
+
+  #team-group-two {
+    grid-template-columns: 100%;
+    margin-bottom: 2rem;
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  #last-cta {
+    flex-direction: column;
+  }
+
+  #last-cta h1 {
+    width: 100%;
+  }
+}
+
+/* Media query for phones */
+
+@media (max-width: 500px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero img {
+    width: 100%;
+  }
+
+  .service-cards {
+    grid-template-columns: 100%;
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  #happy-customers {
+    grid-template-columns: 100%;
+  }
+
+  .flex-text-and-image {
+    flex-direction: column;
+  }
+
+  .flex-text-and-image img {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  #accessibility-card {
+    flex-direction: column-reverse;
+  }
+
+  #team-group-one {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  #team-group-two {
+    grid-template-columns: 100%;
+    margin-bottom: 2rem;
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  #last-cta {
+    flex-direction: column;
+  }
+
+  #last-cta h1 {
+    width: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+main {
+  width: 80%;
+  margin: 96px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#yt-studio-link {
+  text-decoration: none;
+  font-weight: 400;
+  color: #4105c3;
+}
+
+#svg {
+  fill: #4105c3;
+}
+
+#yt-studio-link:hover {
+  text-decoration: underline;
+}
+
+.main-section {
+  border: 1px solid rgb(73, 73, 73);
+  border-radius: 8px;
+  padding: 16px 64px;
+  width: 70%;
+  margin: 64px 8px 80px 8px;
+}
+
+.other-guides {
+  padding-left: 32px;
+  position: sticky;
+}
+.other-guides a {
+  display: block;
+  text-decoration: none;
+  color: #308381;
+}
+
+.other-guides a:hover {
+  color: #104343;
+  text-decoration: underline;
+}
+
+ul li {
+  padding-left: 0;
+}
+
+iframe {
+  width: 100%;
+}
+
+@media (max-width: 882px) {
+  main {
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .main-section {
+    width: 98%;
+    padding: 4px 16px;
+  }
+
+  .other-guides {
+    padding: 0;
+  }
+}

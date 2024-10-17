@@ -1,0 +1,26 @@
+main {
+  width: 60%;
+  margin: 176px auto 96px auto;
+  text-align: justify;
+}
+
+footer {
+  margin-top: 32px;
+}
+
+#contact-us a {
+  text-decoration: none;
+  color: #308381;
+  font-weight: 400;
+}
+
+#contact-us a:hover {
+  border-bottom: 2px solid;
+}
+
+
+@media (max-width: 1000px) {
+  main {
+    width: 90%;
+  }
+}

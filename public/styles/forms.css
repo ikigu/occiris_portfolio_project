@@ -1,0 +1,190 @@
+img {
+  width: 5rem;
+  margin: 2.3rem auto 40px auto;
+}
+
+h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+form {
+  padding-bottom: 80px;
+}
+
+.order-modal textarea {
+  width: 90%;
+}
+
+.auth-forms {
+  width: 316px;
+  margin: auto auto;
+}
+
+span {
+  color: rgb(218, 94, 94);
+}
+
+label {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+a {
+  color: #308381;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font: 400 14px "Roboto", sans-serif;
+}
+
+input,
+select {
+  height: 2.5rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #409694;
+  border: none;
+  background-color: #e9fcfb;
+  border: none;
+}
+
+input:visited,
+select:visited,
+textarea:visited {
+  outline: none;
+}
+
+select {
+  border: 1px solid black;
+  border-radius: 8px;
+  appearance: none;
+}
+
+textarea {
+  width: 100%;
+  border: 1.3px solid black;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  resize: none;
+}
+
+#checkbox {
+  width: 15px;
+  height: 15px;
+  accent-color: #308381;
+}
+
+.checkbox-flex {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.checkbox-flex label {
+  font-size: 0.75rem;
+  color: rgb(53, 53, 53);
+  margin-bottom: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#remember-me-label,
+#forgot-password {
+  margin-bottom: 12px;
+}
+
+button.inactive {
+  background-color: rgb(151, 151, 151);
+  pointer-events: none;
+}
+
+button {
+  width: 100%;
+  height: 2.6rem;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #1c2423;
+  transition: background-color ease 0.5s;
+}
+
+button:hover {
+  background-color: #308381;
+  cursor: pointer;
+}
+
+.loader {
+  pointer-events: none;
+  height: 15px;
+  width: 15px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: an1 1s ease infinite;
+}
+
+@keyframes an1 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.message {
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 16px auto;
+  font-weight: 400;
+  text-align: center;
+  text-wrap: balance;
+  display: none;
+}
+
+#warning-message {
+  background-color: #ffc9c9;
+  color: #000000;
+}
+
+#success-message {
+  background-color: #cefcaf;
+  color: rgb(29, 75, 0);
+}
+
+#password-change-form {
+  padding-bottom: 16px;
+}
+
+/* password-change form */
+
+#login-link {
+  display: none;
+}
