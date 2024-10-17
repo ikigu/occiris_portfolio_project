@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Log in</title>
+    <%- include("../includes/head") %>
+    <link rel="stylesheet" href="/styles/forms.css" />
+    <link rel="canonical" href="https://occiris.com/login" />
+  </head>
+  <body>
+    <main class="auth-forms">
+      <div>
+        <a href="/">
+          <img src="/images/occiris-logo.png" alt="occiris logo" />
+        </a>
+      </div>
+
+      <h3>Log in</h3>
+      <p>Dont have an account? <a href="/signup">Sign Up</a></p>
+      <% if (loginErrorMessage) { %>
+      <p style="display: block" class="message" id="warning-message">
+        <%- loginErrorMessage %>
+      </p>
+      <% } %>
+      <form action="/login" method="POST">
+        <label for="email-address">Email Address</label>
+        <% if (enteredDetails) { %>
+        <input
+          type="email"
+          id="email-address"
+          name="email"
+          value="<%= enteredDetails.enteredEmail %>"
+          placeholder="Enter your email"
+          required
+        />
+        <% } else { %>
+        <input
+          type="email"
+          id="email-address"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <% } %>
+        <label for="password">Password</label>
+        <% if (enteredDetails) { %>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          value="<%= enteredDetails.enteredPassword %>"
+          required
+        />
+        <% } else { %>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+        <% } %>
+        <input type="hidden" value="<%= locals.csrf %>" name="csrfToken" />
+        <div class="flex-container">
+          <div class="checkbox-flex">
+            <input type="checkbox" name="checkbox" id="checkbox" />
+            <label for="" id="remember-me-label">Remember me</label>
+          </div>
+          <a href="/forgot-password" id="forgot-password">Forgot password?</a>
+        </div>
+        <button>Log in</button>
+      </form>
+    </main>
+  </body>
+</html>

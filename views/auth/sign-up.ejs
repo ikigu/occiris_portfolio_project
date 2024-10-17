@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    <%- include("../includes/head") %>
+    <script src="/scripts/activate-submit-btns.js" defer></script>
+    <link rel="stylesheet" href="/styles/forms.css" />
+    <link rel="canonical" href="https://occiris.com/signup" />
+  </head>
+  <body>
+    <main class="auth-forms">
+      <div>
+        <a href="/">
+          <img src="/images/occiris-logo.png" alt="occiris logo" />
+        </a>
+      </div>
+
+      <h3>Sign up</h3>
+      <% if (loginErrorMessage) { %>
+      <p style="display: block" class="message" id="warning-message">
+        <%- loginErrorMessage %>
+      </p>
+      <% } %>
+      <p>Already have an account? <a href="/login">Log in</a></p>
+      <form action="/signup" method="POST">
+        <input type="hidden" value="<%= locals.csrf %>" name="csrfToken" />
+        <label for="firstName">First Name<span>*</span></label>
+        <input
+          type="text"
+          name="firstName"
+          id="firstName"
+          placeholder="Enter your first name"
+          required
+        />
+        <label for="lastName">Last Name<span>*</span></label>
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          placeholder="Enter your last name"
+          required
+        />
+        <label for="email-address">Email Address<span>*</span></label>
+        <input
+          type="email"
+          name="email"
+          id="email-address"
+          placeholder="Enter your email"
+          required
+        />
+        <label for="password">Password<span>*</span></label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+        />
+        <label for="business-name"
+          >Business Name
+          <span style="color: rgb(143, 142, 142); font-style: italic"
+            >(optional)</span
+          ></label
+        >
+        <input type="text" id="business-name" name="business-name" />
+        <label for="vat-id"
+          >VAT ID
+          <span style="color: rgb(143, 142, 142); font-style: italic"
+            >(EU customers only)</span
+          ></label
+        >
+        <input type="text" id="vat-id" name="vatId" />
+        <div class="checkbox-flex">
+          <input type="checkbox" name="checkbox" id="checkbox" required />
+          <label for="checkbox" id="remember-me-label"
+            >I agree to the terms of service and privacy policy.</label
+          >
+        </div>
+        <button id="signup-btn">Sign up</button>
+      </form>
+    </main>
+  </body>
+</html>
