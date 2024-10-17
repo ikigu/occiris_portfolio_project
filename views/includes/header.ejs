@@ -1,0 +1,36 @@
+<div>
+  <a href="/">
+    <img src="/images/occiris-logo.png" alt="Occiris logo"/>
+  </a>
+</div>
+<ul id="navbar">
+  <li>
+    <a href="#">Services
+    <%- include("../svgs/down-arrow") %>
+    <ul class="drop-down-parent">
+      <li class="drop-down-item"><a href="/order/captions">Closed Captions</a></li>
+      <li class="drop-down-item"><a href="/order/transcript">Transcription</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#">About Us</a>
+    <%- include("../svgs/down-arrow") %>
+    <ul class="drop-down-parent">
+      <li class="drop-down-item">
+        <a href="/how-we-started">How we Started</a>
+      </li class="drop-down-item">
+      <li><a href="/our-philosophy">Our Philosophy</a></li>
+    </ul>
+  </li>
+  <li><a href="/contact-sales">Contact Sales</a></li>
+  <% if (!locals.user) { %>
+    <li>
+      <a href="/order/captions" class="get-started-btn">Get Started</a>
+    </li>
+    <li><a href="/login">Log In</a></li>
+  <% } else { %>
+    <li id="hi-user">
+      <a style="border-bottom: 2px solid;" href="/myfiles">Hi, <%= locals.user.firstName %>!</a>
+    </li>
+  <% } %>
+</ul>
