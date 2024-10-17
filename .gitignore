@@ -9,3 +9,4 @@ mykey.json
 .DS_Store
 package-lock.json
 utils/captions.js
+email-templates/discard.handlebars
