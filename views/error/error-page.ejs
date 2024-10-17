@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head") %>
+    <title>Error!</title>
+    <script src="/scripts/responsive-header-script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <%- include("../includes/header") %>
+      <%- include("../includes/header-side-menu") %>
+    </header>
+    <main style="width: 70%; margin: 280px auto; text-align: center;" >
+      <%- include("../includes/side-menu")  %>
+      <h1 style="color: rgb(200, 0, 0)"><%= errorMessage %></h1>
+      <a style="text-decoration: none; color: #308381; font-weight: 400;" href="/">Go back home ></a>
+    </main>
+    <footer><%- include("../includes/footer") %></footer>
+  </body>
+</html>
