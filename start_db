@@ -1,0 +1,2 @@
+#!/bin/bash
+mongod --dbpath /Users/ikigu/Documents/mongodb/data --logpath /Users/ikigu/Documents/mongodb/logs/mongo.log
