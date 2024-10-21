@@ -21,18 +21,21 @@
       include("../../includes/header-side-menu") %>
     </header>
     <main>
-      <%- include("../../includes/side-menu") %> <%- include("./hero") %> <%-
-      include("./price-cards") %> <%- include("./reviews") %> <%-
-      include("./statistics") %> <%- include("./captions-growth") %> <%-
-      include("./transcription-growth") %> <%- include("./last-cta") %> <% if
-      (!cookieBannerUnderstood) { %>
-      <article style="display: none" id="cookie-banner">
-        <p>
-          This website uses cookies to improve your web experience. By using the
-          site, you agree to the use of cookies.
-        </p>
-        <button id="cookie-accept">I understand</button>
-      </article>
+      <%- include("../../includes/side-menu") %>
+      <%- include("./hero") %>
+      <%- include("./price-cards") %>
+      <%- include("./statistics") %>
+      <%- include("./captions-growth") %>
+      <%- include("./transcription-growth") %>
+      <%- include("./last-cta") %>
+      <% if(!cookieBannerUnderstood) { %>
+        <article style="display: none" id="cookie-banner">
+          <p>
+            This website uses cookies to improve your web experience. By using the
+            site, you agree to the use of cookies.
+          </p>
+          <button id="cookie-accept">I understand</button>
+        </article>
       <% } %>
     </main>
     <footer><%- include("../../includes/footer") %></footer>
